@@ -1,0 +1,206 @@
+/* --- VARIABLES Y RESET --- */
+:root {
+  --bg-body: #f3f4f6; /* Gris muy claro de fondo */
+  --bg-card: #ffffff; /* Blanco puro para las tarjetas */
+  --text-primary: #1f2937; /* Gris oscuro casi negro para texto */
+  --text-secondary: #6b7280; /* Gris medio para descripciones */
+  --accent-color: #3b82f6; /* Un azul profesional para enlaces y acentos */
+  --code-bg: #111827; /* Fondo oscuro para los bloques de código */
+  --code-text: #e5e7eb; /* Texto claro para el código */
+  --sidebar-width: 260px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* --- LAYOUT PRINCIPAL (GRID) --- */
+.main-container {
+  display: grid;
+  /* Define dos columnas: una fija para el menú, otra flexible para el contenido */
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+/* --- SIDEBAR (MENÚ LATERAL) --- */
+.sidebar {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-right: 1px solid #e5e7eb;
+  /* Hace que el menú se quede fijo al hacer scroll */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.brand {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: var(--accent-color);
+  letter-spacing: -0.5px;
+}
+
+.toc-menu h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.toc-menu ul {
+  list-style: none;
+}
+
+.toc-menu li {
+  margin-bottom: 0.8rem;
+}
+
+.toc-menu a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toc-menu a:hover {
+  background-color: #eff6ff; /* Azul muy clarito al pasar el mouse */
+  color: var(--accent-color);
+}
+
+/* --- ÁREA DE CONTENIDO PRINCIPAL --- */
+.content-area {
+  padding: 3rem 4rem;
+}
+
+.main-header {
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+.main-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* --- GRID TIPO PERIÓDICO (LAS TARJETAS) --- */
+.newspaper-grid {
+  display: grid;
+  /* Esto crea columnas automáticas. Si cabe, pone 2, si no, 1.
+       minmax(400px, 1fr) significa: "haz que la columna mida al menos 400px,
+       pero si hay espacio, que se expanda" */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  align-items: start; /* Evita que las tarjetas se estiren verticalmente */
+}
+
+/* --- DISEÑO DE LAS TARJETAS (SECCIONES) --- */
+.card {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Esto es para el scroll suave al hacer click en el menú */
+  scroll-margin-top: 2rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Un pequeño adorno azul antes del título de cada sección */
+.card h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- BLOQUES DE CÓDIGO --- */
+.code-block {
+  background-color: var(--code-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+}
+
+.code-block code {
+  display: block; /* Cada comando en su propia línea */
+  color: var(--code-text);
+  margin-bottom: 0.8rem;
+  white-space: pre-wrap; /* Permite que el código largo se ajuste */
+}
+
+.code-block code:last-child {
+  margin-bottom: 0;
+}
+
+.comment {
+  display: block;
+  color: #6b7280; /* Color gris para los comentarios */
+  margin-bottom: 0.3rem;
+  font-style: italic;
+}
+
+/* --- RESPONSIVE DESIGN (Adaptación a móviles) --- */
+@media (max-width: 768px) {
+  .main-container {
+    /* En pantallas pequeñas, cambiamos a una sola columna */
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    /* El menú deja de ser lateral y fijo, pasa arriba */
+    position: relative;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem;
+  }
+
+  .content-area {
+    padding: 2rem 1.5rem;
+  }
+
+  .newspaper-grid {
+    /* Forzamos una sola columna en las tarjetas también */
+    grid-template-columns: 1fr;
+  }
+}
