@@ -9,20 +9,48 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
     <div class="main-container">
       <aside class="sidebar">
-        <div class="brand">Git Master</div>
+        <div class="brand"><i class="ph ph-git-merge"></i> Git Master</div>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+
         <nav class="toc-menu">
-          <h3>Contenido</h3>
+          <h3 data-i18n="toc_title">Contenido</h3>
           <ul>
-            <li><a href="#config">1. Configuración Inicial</a></li>
-            <li><a href="#start">2. Arrancando Motores</a></li>
-            <li><a href="#daily">3. El Ciclo Diario</a></li>
-            <li><a href="#branches">4. Ramas (Universos)</a></li>
-            <li><a href="#cloud">5. Nube y Sincronización</a></li>
-            <li><a href="#info">6. Información e Historial</a></li>
+            <li>
+              <a href="#config" data-i18n="nav_config"
+                >1. Configuración Inicial</a
+              >
+            </li>
+            <li>
+              <a href="#start" data-i18n="nav_start">2. Arrancando Motores</a>
+            </li>
+            <li>
+              <a href="#daily" data-i18n="nav_daily">3. El Ciclo Diario</a>
+            </li>
+            <li>
+              <a href="#branches" data-i18n="nav_branches"
+                >4. Ramas (Universos)</a
+              >
+            </li>
+            <li>
+              <a href="#cloud" data-i18n="nav_cloud"
+                >5. Nube y Sincronización</a
+              >
+            </li>
+            <li>
+              <a href="#info" data-i18n="nav_info"
+                >6. Información e Historial</a
+              >
+            </li>
           </ul>
         </nav>
       </aside>
@@ -30,123 +58,138 @@
       <main class="content-area">
         <header class="main-header">
           <h1>Git Command Cheat Sheet</h1>
-          <p>
+          <p data-i18n="header_subtitle">
             Tu guía rápida de comandos esenciales aprendidos en el bootcamp.
           </p>
         </header>
 
         <div class="newspaper-grid">
           <section id="config" class="card">
-            <h2>1. Configuración Inicial</h2>
-            <p>
+            <h2 data-i18n="sec1_title">1. Configuración Inicial</h2>
+            <p data-i18n="sec1_desc">
               Lo primero que haces en una PC nueva. Fundamental para que tus
               commits tengan tu firma.
             </p>
             <div class="code-block">
-              <span class="comment"># Configura tu identidad global</span>
-              <code>git config --global user.name "Tu Nombre"</code>
-              <code>git config --global user.email "tu@email.com"</code>
-              <span class="comment"
+              <span class="comment" data-i18n="sec1_c1"
+                ># Configura tu identidad global</span
+              >
+              <div class="cmd-row">
+                <code>git config --global user.name "Your Name"</code>
+              </div>
+              <div class="cmd-row">
+                <code>git config --global user.email "you@email.com"</code>
+              </div>
+              <span class="comment" data-i18n="sec1_c2"
                 ># Ajustes de calidad de vida recomendados</span
               >
-              <code>git config --global init.defaultBranch main</code>
+              <div class="cmd-row">
+                <code>git config --global init.defaultBranch main</code>
+              </div>
             </div>
           </section>
 
           <section id="start" class="card">
-            <h2>2. Arrancando Motores</h2>
-            <p>
+            <h2 data-i18n="sec2_title">2. Arrancando Motores</h2>
+            <p data-i18n="sec2_desc">
               Cómo empezar un proyecto, ya sea desde cero en tu PC o trayéndolo
               de la nube.
             </p>
             <div class="code-block">
-              <span class="comment"
+              <span class="comment" data-i18n="sec2_c1"
                 ># Convierte la carpeta actual en un repositorio</span
               >
-              <code>git init</code>
-              <span class="comment"
-                ># Descarga un proyecto existente (con toda su historia)</span
+              <div class="cmd-row"><code>git init</code></div>
+              <span class="comment" data-i18n="sec2_c2"
+                ># Descarga un proyecto existente</span
               >
-              <code>git clone [URL_SSH_DEL_REPO]</code>
+              <div class="cmd-row"><code>git clone [URL_SSH_REPO]</code></div>
             </div>
           </section>
 
           <section id="daily" class="card">
-            <h2>3. El Ciclo Diario</h2>
-            <p>
+            <h2 data-i18n="sec3_title">3. El Ciclo Diario</h2>
+            <p data-i18n="sec3_desc">
               El flujo sagrado de trabajo: trabajar, preparar y guardar. Repetir
               100 veces al día.
             </p>
             <div class="code-block">
-              <span class="comment"
-                ># Comprueba qué ha cambiado (ROJO = sin preparar, VERDE =
-                listo)</span
+              <span class="comment" data-i18n="sec3_c1"
+                ># Comprueba qué ha cambiado</span
               >
-              <code>git status</code>
-              <span class="comment"
-                ># Prepara TODOS los archivos cambiados para la foto
-                (Stage)</span
+              <div class="cmd-row"><code>git status</code></div>
+              <span class="comment" data-i18n="sec3_c2"
+                ># Prepara TODOS los archivos cambiados (Stage)</span
               >
-              <code>git add .</code>
-              <span class="comment"
-                ># Toma la foto y guarda la versión con un mensaje</span
+              <div class="cmd-row"><code>git add .</code></div>
+              <span class="comment" data-i18n="sec3_c3"
+                ># Guarda la versión con un mensaje</span
               >
-              <code
-                >git commit -m "Verbo imperativo describiendo el cambio"</code
-              >
+              <div class="cmd-row">
+                <code>git commit -m "action verb describing change"</code>
+              </div>
             </div>
           </section>
 
           <section id="branches" class="card">
-            <h2>4. Ramas (Universos Paralelos)</h2>
-            <p>
+            <h2 data-i18n="sec4_title">4. Ramas (Universos Paralelos)</h2>
+            <p data-i18n="sec4_desc">
               Nunca trabajes directo en `main`. Crea espacios seguros para tus
               experimentos.
             </p>
             <div class="code-block">
-              <span class="comment"
-                ># Crea UNA NUEVA rama y te mueve a ella automáticamente</span
+              <span class="comment" data-i18n="sec4_c1"
+                ># Crea UNA NUEVA rama y te mueve a ella</span
               >
-              <code>git checkout -b nombre-de-la-nueva-rama</code>
-              <span class="comment"
-                ># Regresa a la rama principal (sin crear nada nuevo)</span
+              <div class="cmd-row">
+                <code>git checkout -b new-branch-name</code>
+              </div>
+              <span class="comment" data-i18n="sec4_c2"
+                ># Regresa a la rama principal</span
               >
-              <code>git checkout main</code>
+              <div class="cmd-row"><code>git checkout main</code></div>
             </div>
           </section>
 
           <section id="cloud" class="card">
-            <h2>5. Nube y Sincronización</h2>
-            <p>
+            <h2 data-i18n="sec5_title">5. Nube y Sincronización</h2>
+            <p data-i18n="sec5_desc">
               Conectando tu PC local con GitHub. Subir tus cambios y bajar los
               de tus compañeros.
             </p>
             <div class="code-block">
-              <span class="comment"
-                ># Sube tu rama actual a GitHub por primera vez (publicar)</span
+              <span class="comment" data-i18n="sec5_c1"
+                ># Sube tu rama actual a GitHub (publicar)</span
               >
-              <code>git push -u origin nombre-de-tu-rama</code>
-              <span class="comment"
-                ># Baja los cambios nuevos de la nube a tu rama actual</span
+              <div class="cmd-row">
+                <code>git push -u origin branch-name</code>
+              </div>
+              <span class="comment" data-i18n="sec5_c2"
+                ># Baja los cambios nuevos de la nube</span
               >
-              <code>git pull origin main</code>
+              <div class="cmd-row"><code>git pull origin main</code></div>
             </div>
           </section>
 
           <section id="info" class="card">
-            <h2>6. Información e Historial</h2>
-            <p>Comandos para no perderse y ver qué ha pasado antes.</p>
+            <h2 data-i18n="sec6_title">6. Información e Historial</h2>
+            <p data-i18n="sec6_desc">
+              Comandos para no perderse y ver qué ha pasado antes.
+            </p>
             <div class="code-block">
-              <span class="comment"
-                ># Muestra el historial de commits resumido en una línea</span
+              <span class="comment" data-i18n="sec6_c1"
+                ># Historial de commits resumido</span
               >
-              <code>git log --oneline</code>
-              <span class="comment"># Verifica la conexión SSH con GitHub</span>
-              <code>ssh -T git@github.com</code>
+              <div class="cmd-row"><code>git log --oneline</code></div>
+              <span class="comment" data-i18n="sec6_c2"
+                ># Verifica la conexión SSH</span
+              >
+              <div class="cmd-row"><code>ssh -T git@github.com</code></div>
             </div>
           </section>
         </div>
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
