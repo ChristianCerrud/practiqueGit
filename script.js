@@ -34,6 +34,10 @@ const translations = {
     sec5_title: "5. Nube y Sincronización",
     sec5_desc:
       "Conectando tu PC local con GitHub. Subir tus cambios y bajar los de tus compañeros.",
+
+    // Nueva traducción
+    sec5_c0: "# Conecta tu repo local con el de GitHub",
+
     sec5_c1: "# Sube tu rama actual a GitHub (publicar)",
     sec5_c2: "# Baja los cambios nuevos de la nube",
     sec6_title: "6. Información e Historial",
@@ -75,6 +79,10 @@ const translations = {
     sec5_title: "5. Cloud & Sync",
     sec5_desc:
       "Connecting local PC to GitHub. Uploading your changes and getting others'.",
+
+    // Nueva traducción
+    sec5_c0: "# Connect local repo to GitHub",
+
     sec5_c1: "# Upload current branch to GitHub",
     sec5_c2: "# Download new changes from cloud",
     sec6_title: "6. Info & History",
@@ -116,6 +124,10 @@ const translations = {
     sec5_title: "5. Cloud et Synchro",
     sec5_desc:
       "Connecter le PC à GitHub. Envoyer vos modifs et récupérer les autres.",
+
+    // Nueva traducción
+    sec5_c0: "# Connecte le dépôt local à GitHub",
+
     sec5_c1: "# Envoie votre branche sur GitHub",
     sec5_c2: "# Récupère les changements du cloud",
     sec6_title: "6. Info et Historique",
