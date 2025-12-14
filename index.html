@@ -26,9 +26,7 @@
           <h3 data-i18n="toc_title">Contenido</h3>
           <ul>
             <li>
-              <a href="#config" data-i18n="nav_config"
-                >1. Configuración Inicial</a
-              >
+              <a href="#config" data-i18n="nav_config">1. Configuración</a>
             </li>
             <li>
               <a href="#start" data-i18n="nav_start">2. Arrancando Motores</a>
@@ -37,19 +35,16 @@
               <a href="#daily" data-i18n="nav_daily">3. El Ciclo Diario</a>
             </li>
             <li>
-              <a href="#branches" data-i18n="nav_branches"
-                >4. Ramas (Universos)</a
-              >
+              <a href="#branches" data-i18n="nav_branches">4. Ramas</a>
             </li>
             <li>
-              <a href="#cloud" data-i18n="nav_cloud"
-                >5. Nube y Sincronización</a
-              >
+              <a href="#cloud" data-i18n="nav_cloud">5. Nube y Synchro</a>
             </li>
             <li>
-              <a href="#info" data-i18n="nav_info"
-                >6. Información e Historial</a
-              >
+              <a href="#info" data-i18n="nav_info">6. Historial</a>
+            </li>
+            <li>
+              <a href="#workflow" data-i18n="nav_workflow">7. Ciclo de Vida</a>
             </li>
           </ul>
         </nav>
@@ -193,6 +188,41 @@
                 ># Verifica la conexión SSH</span
               >
               <div class="cmd-row"><code>ssh -T git@github.com</code></div>
+            </div>
+          </section>
+
+          <section
+            id="workflow"
+            class="card"
+            style="border-color: var(--success)"
+          >
+            <h2 data-i18n="sec7_title">7. El Modelo Mental</h2>
+            <p data-i18n="sec7_desc">
+              La distinción clave para no cometer errores: Configuración vs
+              Rutina.
+            </p>
+            <div class="code-block">
+              <span
+                class="comment"
+                data-i18n="sec7_p1"
+                style="color: var(--accent)"
+                ># FASE 1: Creación (Solo una vez)</span
+              >
+              <div class="cmd-row"><code>git init</code></div>
+              <div class="cmd-row"><code>git branch -M main</code></div>
+              <div class="cmd-row">
+                <code>git remote add origin [URL]</code>
+              </div>
+
+              <span
+                class="comment"
+                data-i18n="sec7_p2"
+                style="color: var(--success); margin-top: 1.5rem"
+                ># FASE 2: Rutina (Repetir Infinitamente)</span
+              >
+              <div class="cmd-row"><code>git add .</code></div>
+              <div class="cmd-row"><code>git commit -m "mensaje"</code></div>
+              <div class="cmd-row"><code>git push</code></div>
             </div>
           </section>
         </div>

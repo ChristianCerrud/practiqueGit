@@ -8,6 +8,9 @@ const translations = {
     nav_branches: "4. Ramas (Universos)",
     nav_cloud: "5. Nube y Sincronización",
     nav_info: "6. Información e Historial",
+    // NUEVO
+    nav_workflow: "7. El Modelo Mental",
+
     header_subtitle:
       "Tu guía rápida de comandos esenciales aprendidos en el bootcamp.",
     sec1_title: "1. Configuración Inicial",
@@ -35,15 +38,20 @@ const translations = {
     sec5_desc:
       "Conectando tu PC local con GitHub. Subir tus cambios y bajar los de tus compañeros.",
 
-    // Nueva traducción
     sec5_c0: "# Conecta tu repo local con el de GitHub",
-
     sec5_c1: "# Sube tu rama actual a GitHub (publicar)",
     sec5_c2: "# Baja los cambios nuevos de la nube",
     sec6_title: "6. Información e Historial",
     sec6_desc: "Comandos para no perderse y ver qué ha pasado antes.",
     sec6_c1: "# Historial de commits resumido",
     sec6_c2: "# Verifica la conexión SSH",
+
+    // NUEVA SECCIÓN
+    sec7_title: "7. El Modelo Mental (Workflow)",
+    sec7_desc:
+      "La distinción clave para no cometer errores: Configuración vs Rutina.",
+    sec7_p1: "# FASE 1: Creación (Solo UNA vez al inicio)",
+    sec7_p2: "# FASE 2: Rutina (Repetir infinitamente)",
   },
   en: {
     toc_title: "Contents",
@@ -53,6 +61,9 @@ const translations = {
     nav_branches: "4. Branches (Universes)",
     nav_cloud: "5. Cloud & Sync",
     nav_info: "6. Info & History",
+    // NEW
+    nav_workflow: "7. Mental Model",
+
     header_subtitle:
       "Your quick guide to essential commands learned in the bootcamp.",
     sec1_title: "1. Initial Setup",
@@ -80,15 +91,19 @@ const translations = {
     sec5_desc:
       "Connecting local PC to GitHub. Uploading your changes and getting others'.",
 
-    // Nueva traducción
     sec5_c0: "# Connect local repo to GitHub",
-
     sec5_c1: "# Upload current branch to GitHub",
     sec5_c2: "# Download new changes from cloud",
     sec6_title: "6. Info & History",
     sec6_desc: "Commands to find your way and see what happened before.",
     sec6_c1: "# Summary commit history",
     sec6_c2: "# Verify SSH connection",
+
+    // NEW SECTION
+    sec7_title: "7. The Mental Model (Workflow)",
+    sec7_desc: "The key distinction to avoid errors: Setup vs Routine.",
+    sec7_p1: "# PHASE 1: Creation (Once per project)",
+    sec7_p2: "# PHASE 2: Routine (Repeat endlessly)",
   },
   fr: {
     toc_title: "Contenu",
@@ -98,6 +113,9 @@ const translations = {
     nav_branches: "4. Branches (Univers)",
     nav_cloud: "5. Cloud et Synchro",
     nav_info: "6. Info et Historique",
+    // NEW
+    nav_workflow: "7. Modèle Mental",
+
     header_subtitle:
       "Votre guide rapide des commandes essentielles apprises au bootcamp.",
     sec1_title: "1. Configuration Initiale",
@@ -125,15 +143,20 @@ const translations = {
     sec5_desc:
       "Connecter le PC à GitHub. Envoyer vos modifs et récupérer les autres.",
 
-    // Nueva traducción
     sec5_c0: "# Connecte le dépôt local à GitHub",
-
     sec5_c1: "# Envoie votre branche sur GitHub",
     sec5_c2: "# Récupère les changements du cloud",
     sec6_title: "6. Info et Historique",
     sec6_desc: "Commandes pour s'orienter et voir l'historique.",
     sec6_c1: "# Historique des commits résumé",
     sec6_c2: "# Vérifie la connexion SSH",
+
+    // NEW SECTION
+    sec7_title: "7. Modèle Mental (Workflow)",
+    sec7_desc:
+      "La distinction clé pour éviter les erreurs : Config vs Routine.",
+    sec7_p1: "# PHASE 1 : Création (Une seule fois)",
+    sec7_p2: "# PHASE 2 : Routine (Répéter à l'infini)",
   },
 };
 
